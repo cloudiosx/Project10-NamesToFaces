@@ -13,7 +13,7 @@
 		6395BE1027BADB2C003FDB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6395BE0E27BADB2C003FDB69 /* Main.storyboard */; };
 		6395BE1227BADB2E003FDB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6395BE1127BADB2E003FDB69 /* Assets.xcassets */; };
 		6395BE1527BADB2E003FDB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6395BE1327BADB2E003FDB69 /* LaunchScreen.storyboard */; };
-		6395BE1D27BDBD20003FDB69 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395BE1C27BDBD20003FDB69 /* PersonCell.swift */; };
+		6395BE1F27BE3663003FDB69 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395BE1E27BE3663003FDB69 /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		6395BE1127BADB2E003FDB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6395BE1427BADB2E003FDB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6395BE1627BADB2E003FDB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6395BE1C27BDBD20003FDB69 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		6395BE1E27BE3663003FDB69 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonCell.swift; path = ../PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 		6395BE0727BADB2C003FDB69 /* Project10 - Names to Faces */ = {
 			isa = PBXGroup;
 			children = (
+				6395BE1E27BE3663003FDB69 /* PersonCell.swift */,
 				6395BE0827BADB2C003FDB69 /* AppDelegate.swift */,
 				6395BE0A27BADB2C003FDB69 /* SceneDelegate.swift */,
 				6395BE0C27BADB2C003FDB69 /* ViewController.swift */,
 				6395BE0E27BADB2C003FDB69 /* Main.storyboard */,
-				6395BE1C27BDBD20003FDB69 /* PersonCell.swift */,
 				6395BE1127BADB2E003FDB69 /* Assets.xcassets */,
 				6395BE1327BADB2E003FDB69 /* LaunchScreen.storyboard */,
 				6395BE1627BADB2E003FDB69 /* Info.plist */,
@@ -143,7 +143,7 @@
 			files = (
 				6395BE0D27BADB2C003FDB69 /* ViewController.swift in Sources */,
 				6395BE0927BADB2C003FDB69 /* AppDelegate.swift in Sources */,
-				6395BE1D27BDBD20003FDB69 /* PersonCell.swift in Sources */,
+				6395BE1F27BE3663003FDB69 /* PersonCell.swift in Sources */,
 				6395BE0B27BADB2C003FDB69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
