@@ -74,14 +74,27 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
         
-        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
-        ac.addTextField(configurationHandler: nil)
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
-            guard let newName = ac?.textFields?[0].text else { return }
-            person.name = newName
+        let ac = UIAlertController(title: "Do you want to rename or delete the person?", message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Rename", style: .default, handler: { _ in
+            let renameAlert = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+            renameAlert.addTextField(configurationHandler: nil)
+            renameAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            renameAlert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak renameAlert] _ in
+                guard let newName = renameAlert?.textFields?[0].text else { return }
+                person.name = newName
+                self?.collectionView.reloadData()
+            })
+            self.present(renameAlert, animated: true, completion: nil)
+        }))
+        ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            if let index = self?.people.firstIndex(of: person) {
+                self?.people.remove(at: index)
+            }
             self?.collectionView.reloadData()
-        })
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        
         present(ac, animated: true, completion: nil)
     }
     
